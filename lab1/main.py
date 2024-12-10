@@ -10,8 +10,8 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 
 # Токены API
-IMAGE_TOKEN = "FJIuYF5ujpnZIxRtpcRUCYuCtpMjaP-RMwU_pc1UJx4"
-BOT_TOKEN = '8074036162:AAEj8H10r7Vxx7GJ94b0-zd7lnldGkS7TAc'
+IMAGE_TOKEN = "YOUR_IMAGE_TOKEN"
+BOT_TOKEN = 'YOUR_TOKEN'
 
 # Инициализация бота и диспетчера
 bot_instance = Bot(token=BOT_TOKEN)
