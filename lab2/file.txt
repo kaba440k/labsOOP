@@ -1,0 +1,7 @@
+ноги-legs
+жизнь-life
+день-day
+ночь-night
+вода-water
+утро-morning
+собака-dog

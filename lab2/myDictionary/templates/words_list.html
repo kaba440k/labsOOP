@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список слов</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        td {
+            background-color: #f9f9f9;
+        }
+        td:hover {
+            background-color: #f1f1f1;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+            transition: background-color 0.3s;
+
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .button {
+            display: flex; /* Используем Flexbox для центрирования */
+            justify-content: center; /* Центрируем по горизонтали */
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Список слов</h1>
+</header>
+
+<div class="container">
+    <table>
+        <tr>
+            <th>Слово на русском</th>
+            <th>Перевод слова</th>
+        </tr>
+        {% for word, translation in words %}
+            <tr>
+                <td>{{ word }}</td>
+                <td>{{ translation }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+<div class="button">
+    <a href="{% url 'home' %}" class="btn"><i class="fas fa-home btn-icon"></i>На главную</a>
+</div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Мой словарь</p>
+</footer>
+
+</body>
+</html>
